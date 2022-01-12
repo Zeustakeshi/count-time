@@ -235,8 +235,8 @@ function alarm (){
    
 }
 getRealTime()
-var hour_Alarm = h;
-var munite_Alarm = m;
+var hour_Alarm = parseInt (h);
+var munite_Alarm = parseInt(m);
 var second_Alarm = "00";
 function cong_tru (obj){
     
@@ -276,13 +276,17 @@ function dem_nguoc (hour_now, munite_now, second_now){
         
         if (hour_now <= 0 && munite_now == 0 && second_now == 0){
             audio.play();
-            
+            // var getup = confirm ("Đến giờ rồi")
+            // if(getup == true){
+                
+            // }
             getRealTime()
-            hour_Alarm = h;
-            munite_Alarm = m;
-            second_Alarm = "00";
-            clearInterval(demNguoc);
-            alarmClock = false  
+                hour_Alarm = h;
+                munite_Alarm = m;
+                second_Alarm = "00";
+                clearInterval(demNguoc);
+                alarmClock = false 
+             
         }
         if(alarmClock == false){
             getRealTime()
